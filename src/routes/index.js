@@ -4,7 +4,7 @@ class Example extends React.Component{
   render(){
     return(
       <Fragment>
-        JUST TEST IT 
+       <div style={{fontSize:"32px",margin:'0 auto'}}> JUST TEST IT</div> 
       </Fragment>
     )
   }
