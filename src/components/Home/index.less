@@ -1,0 +1,109 @@
+.wrapper{
+   border: 5px solid #678FC2;
+   height: 100vh;
+}
+.header{
+    height: 6vh;
+    background: #fff url("http://wdlj.zoomdong.xin/head_bg.gif") repeat-x left top;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid #eee;
+}
+.logo{
+    background: url("http://wdlj.zoomdong.xin/head_leftbg.gif") no-repeat left top;
+    h2{
+        position: absolute;
+        left: 0vw;
+        width: 15vw;
+        text-align: center;
+        line-height: 6vh;
+      
+    }
+    h3{
+        display: block;
+        position: absolute;  
+        width: 8vw;
+        text-align: center;
+        line-height: 6vh;
+        left: 262px;
+        padding-left: 50px;
+    }
+    p{
+      position: absolute;
+      right: 70px;
+      display: block;
+      float: right;
+      color: #000;
+      font-size: 16px;
+    }
+    a{
+      position: absolute;
+      font-size: 16px;
+      right: 5px;
+      display: block;
+      float: right;
+      cursor: pointer;
+      color: #000;
+      &:hover{
+          color: #fff;
+          background-color: blue;
+      }
+    }
+}
+.nav{
+    background:#C7DEFC url("http://wdlj.zoomdong.xin/nav_bg.gif") repeat-x left top;
+    height: 30px; 
+  ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+   }
+   .first{
+       .first_li{
+         float: left;
+         .first_nav{
+            width: 9vw;
+            text-align: center;
+            line-height: 30px;
+            display: block;
+            color: #3F6FC3;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: microsoft yahei;
+        }
+        a:hover{  
+            background-color: rgb(120, 174, 199);
+            color: #002b76;
+        } 
+        .second{
+            position: absolute;
+            width: 9vw;
+            background-color: #C7DEFC;
+            z-index: 100;
+            li{
+              a{
+                  display: block;
+                  line-height: 30px;
+                  font-size: 16px;
+                  color: #3F6FC3;
+                  text-align: center;
+                &:hover{
+                    background-color: rgb(120, 174, 199);
+                    color: #002b76;
+                }
+              }
+            }
+        } 
+       }
+   } 
+}
+.footer{
+    width: 100vw;
+    height: 80vh;
+    background-color: #eee;
+    p{
+        text-align: center;
+    }
+}
+
