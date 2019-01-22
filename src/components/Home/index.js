@@ -4,9 +4,6 @@
 import React, { Fragment } from 'react';
 import styles from './index.less';
 import {message} from 'antd';
-// let style1 = {
-//     display:'none'
-// }
 export default class Home extends React.Component{
     constructor(props){
         super(props);
@@ -19,55 +16,10 @@ export default class Home extends React.Component{
     handleQuit = () =>{
       message.success('您已成功退出')
     }
-    handleIN1 = () =>{ 
-        this.setState({
-          a:true
+    handle = (key,val) =>{
+       this.setState({
+           [key]:val
        })
-    }
-    handleOUT1 = () =>{
-        this.setState({
-         a:false   
-        })
-    }
-    handleIN2 = () =>{ 
-        this.setState({
-          b:true
-       })
-    }
-    handleOUT2 = () =>{
-        this.setState({
-         b:false   
-        })
-    }
-    handleIN3 = () =>{ 
-        this.setState({
-          c:true
-       })
-    }
-    handleOUT3 = () =>{
-        this.setState({
-         c:false   
-        })
-    }
-    handleIN4 = () =>{ 
-        this.setState({
-          d:true
-       })
-    }
-    handleOUT4 = () =>{
-        this.setState({
-         d:false   
-        })
-    }
-    handleIN5 = () =>{ 
-        this.setState({
-          e:true
-       })
-    }
-    handleOUT5 = () =>{
-        this.setState({
-         e:false   
-        })
     }
     render(){
         const {a,b,c,d,e,stuName,studID} = this.state;        
@@ -90,11 +42,10 @@ export default class Home extends React.Component{
                         <ul className={styles.first}>
                             <li className={styles.first_li}><a className={styles.first_nav} href=" ">返回首页</a></li>
                             <li className={styles.first_li}
-                               onMouseOver={this.handleIN1}
-                               onMouseOut={this.handleOUT1}
+                               onMouseOver={()=>{this.handle('a',true)}}
+                               onMouseOut={()=>{this.handle('a',false)}}
                             >
                                 <a className={styles.first_nav} href=" "
-                                
                                  >网上选课</a>
                                 <ul 
                                   className={styles.second}
@@ -105,8 +56,8 @@ export default class Home extends React.Component{
                                 </ul>
                             </li>
                             <li className={styles.first_li}
-                               onMouseOver={this.handleIN2}
-                               onMouseOut={this.handleOUT2}
+                                onMouseOver={()=>{this.handle('b',true)}}
+                                onMouseOut={()=>{this.handle('b',false)}}
                             >
                               <a className={styles.first_nav} href=" "
                               >活动报名
@@ -126,8 +77,8 @@ export default class Home extends React.Component{
                               >教学质量评价</a>
                               </li>
                             <li className={styles.first_li}
-                                onMouseOver={this.handleIN3}
-                                onMouseOut={this.handleOUT3}
+                                 onMouseOver={()=>{this.handle('c',true)}}
+                                 onMouseOut={()=>{this.handle('c',false)}}
                               ><a className={styles.first_nav} href=" ">信息维护</a>
                                 <ul 
                                   className={styles.second}
@@ -138,8 +89,8 @@ export default class Home extends React.Component{
                                 </ul>
                             </li>
                             <li className={styles.first_li}
-                              onMouseOver={this.handleIN4}
-                              onMouseOut={this.handleOUT4}
+                               onMouseOver={()=>{this.handle('d',true)}}
+                               onMouseOut={()=>{this.handle('d',false)}}
                             ><a className={styles.first_nav} href=" ">公用信息</a>
                             <ul 
                                   className={styles.second}
@@ -160,8 +111,8 @@ export default class Home extends React.Component{
                                 </ul>
                             </li>
                             <li className={styles.first_li}
-                              onMouseOver={this.handleIN5}
-                              onMouseOut={this.handleOUT5}
+                               onMouseOver={()=>{this.handle('e',true)}}
+                               onMouseOut={()=>{this.handle('e',false)}}
                             ><a className={styles.first_nav} href=" ">绩点表</a>
                                <ul 
                                   className={styles.second}
